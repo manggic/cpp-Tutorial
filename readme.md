@@ -144,15 +144,3 @@ int main()
 
 
 
-1) umeed
-2) sahara - connection/need with/of parent , friends , sister mom
-3) Borderless world
-4) Gender Gap
-5) Time poverty
-6) cashless society good or bad
-7) life without phone internet
-8) book or movie
-9) post Covid mindset/society
-10) stock market is gambling
-11) Rich and poor
-
