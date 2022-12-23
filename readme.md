@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 04:36:31
+timing = 04:52:31
 
 
 
@@ -226,6 +226,38 @@ int main()
     if( typeid(res) == typeid(int) ){
         cout << "type of both ID is int\n";
     }
+    return 0;
+}
+```
+
+*  stack has predefined size
+*  heap is predefined but can grow
+
+
+### stack and heap
+```
+struct User{
+    const int id;
+    int age;
+
+    User(): id(001), age(25){}
+};
+
+int main(){
+    using namespace std;
+    // stack 
+    int score = 100;
+    User mike;
+   
+
+    // heap
+    int * heap_score = new int;
+    *heap_score = 200;
+    User * nike = new User();
+
+
+    delete heap_score;
+    delete nike;
     return 0;
 }
 ```
