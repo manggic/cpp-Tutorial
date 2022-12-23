@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 04:10:00
+timing = 04:21:00
 
 
 
@@ -152,7 +152,26 @@ try{
 delete[] myp;
 ```
 
+### struct
 
+```
+struct User{
+    const int uId;
+    const char *name; 
+    const char *emamil;  // pointer is constant not the value
+    int course_count;
+};
+
+int main()
+{
+    User mickey = {001, "mickey", "mickey@gmail.com", 2 };
+    User donald = {002, "donald", "donald@gmail.com", 2 };
+    User * d = &donald;
+    d->course_count = 6;
+    cout << donald.course_count;
+    return 0;
+}
+```
 
 
 
