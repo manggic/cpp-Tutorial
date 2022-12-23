@@ -173,5 +173,29 @@ int main()
 }
 ```
 
+### Preprocessor
+```
+#define BOLD 3
 
+int main()
+{
+    cout << BOLD ; // 3
+    return 0;
+}
+```
 
+### Enum
+```
+enum MsOffice{
+    BOLD = 20,
+    ITALICS,
+    UNDERLINE,
+    COSSED
+};
+
+int main()
+{
+    cout << BOLD ;  // 20
+    return 0;
+}
+```
