@@ -294,3 +294,22 @@ int life = 3;
 lifeUp(life); 
 cout << life << endl;
 ```
+
+
+### Creating our own header
+```
+// main.cpp file
+#include <iostream>
+#include <string>
+#include "adder.h"
+
+
+// adder.h file
+#ifndef adder_h 
+#define adder_h 
+
+void lifeUp(int &life){
+     ++life;
+}
+#endif
+```

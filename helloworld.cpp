@@ -1,15 +1,10 @@
 
 #include <iostream>
 #include <string>
-   using namespace std;
-
-void lifeUp(int &life){
-     ++life;
-}
-
+#include "adder.h"
+using namespace std;
 
 int main(){
- 
     int life = 3;
     lifeUp(life); 
     cout << life << endl;
