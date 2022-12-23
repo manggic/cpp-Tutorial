@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 04:52:31
+timing = 05:06:45
 
 
 
@@ -9,7 +9,7 @@ timing = 04:52:31
 * short int - 16 bit ( 2 byte )
 * long int - 64 bit ( 8 byte )
 * char - 8 bit ( 1 byte )
-
+* we can have 2 diff func with same name in cpp
 
 
 ### Pointer 
@@ -260,4 +260,37 @@ int main(){
     delete nike;
     return 0;
 }
+```
+
+### call by value
+```
+void lifeUp(int life){
+     ++life;
+}
+
+int life = 3;
+lifeUp(life); 
+cout << life << endl;
+```
+
+### call by ref
+```
+// method 1
+void lifeUp(int *life){
+     ++(*life);
+}
+
+int life = 3;
+lifeUp(&life); 
+cout << life << endl;
+
+
+// method 2
+void lifeUp(int &life){
+     ++life;
+}
+
+int life = 3;
+lifeUp(life); 
+cout << life << endl;
 ```
