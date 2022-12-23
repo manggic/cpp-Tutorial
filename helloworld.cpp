@@ -9,19 +9,19 @@
 #include <string>
 using namespace std;
 
+struct User{
+    const int uId;
+    const char *name; 
+    const char *emamil;  // pointer is constant not the value
+    int course_count;
+};
+
 int main()
 {
-    int *myp;
-    try
-    {
-        myp = new int[100];
-        cout << *myp;
-    }
-    catch (...)
-    {
-        cout << "failed in allocating memory\n";
-    }
-
-    delete[] myp;
+    User mickey = {001, "mickey", "mickey@gmail.com", 2 };
+    User donald = {002, "donald", "donald@gmail.com", 2 };
+    User * d = &donald;
+    d->course_count = 6;
+    cout << donald.course_count;
     return 0;
 }
