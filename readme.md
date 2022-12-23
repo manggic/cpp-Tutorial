@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 04:21:00
+timing = 04:36:31
 
 
 
@@ -196,6 +196,36 @@ enum MsOffice{
 int main()
 {
     cout << BOLD ;  // 20
+    return 0;
+}
+```
+
+
+### auto 
+```
+string api_call(){
+   return "got the data";
+} 
+
+int another_api_call(){
+    return 1;
+}
+
+int main()
+{
+    auto response = api_call();    
+    auto res = another_api_call(); 
+    
+    cout << "Response of api call is : " << response << endl;
+    cout << "Res of another api call is : " << res << endl;
+    
+    if( typeid(response) == typeid(string) ){
+        cout << "type of both ID matched\n";
+    }
+    
+    if( typeid(res) == typeid(int) ){
+        cout << "type of both ID is int\n";
+    }
     return 0;
 }
 ```

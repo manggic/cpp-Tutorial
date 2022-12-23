@@ -3,15 +3,20 @@
 #include <string>
 using namespace std;
 
-enum MsOffice{
-    BOLD = 20,
-    ITALICS,
-    UNDERLINE,
-    COSSED
-};
+
+
+string api_call(){
+   return "got the data";
+} 
+
+
+int another_api_call(){
+    return 1;
+}
 
 int main()
 {
-    cout << BOLD ;
+    auto response = api_call();    
+    auto res = another_api_call();    
     return 0;
 }
