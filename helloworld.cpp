@@ -9,16 +9,19 @@
 #include <string>
 using namespace std;
 
-
-void sayHello(){
-    puts("Hello \n");
-}
-int calcSum(int a,int b){
-   return a + b;
-}
 int main()
 {
-    cout << calcSum(10,20) << endl;
-    sayHello();
+    int *myp;
+    try
+    {
+        myp = new int[100];
+        cout << *myp;
+    }
+    catch (...)
+    {
+        cout << "failed in allocating memory\n";
+    }
+
+    delete[] myp;
     return 0;
 }

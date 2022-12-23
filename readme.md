@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 03:32:12
+timing = 04:10:00
 
 
 
@@ -138,7 +138,19 @@ int main()
 }
 ```
 
+### Memory Leak
+```
+int *myp;
 
+try{
+    myp = new int[100];
+    cout << *myp;
+}catch (...){
+    cout << "failed in allocating memory\n";
+}
+
+delete[] myp;
+```
 
 
 
