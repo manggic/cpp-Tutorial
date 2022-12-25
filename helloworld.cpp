@@ -1,22 +1,19 @@
 
 #include <iostream>
-#include <string>
-#include "adder.h"
 using namespace std;
+int factorial(int a);
 
-template <typename T>
-
-T addMe(T a, T b){
-   return a + b;
-}
-
-
-void interesting(){
-    puts("interesting");
-}
+// 3! =>  3*2*1
+// 4! =>  4*3*2*1
 
 int main(){
-   void (*ptrToInteresting)() = interesting; // ptr to function 
-   ptrToInteresting();
+    cout << "factorial of 4 is :" <<factorial(4);
     return 0;
+}
+
+int factorial(int a){
+  if(a == 1){
+     return 1;
+  }
+   return a * factorial(a-1);
 }

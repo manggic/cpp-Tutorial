@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 05:27:30
+timing = 05:44:30
 
 
 
@@ -335,4 +335,35 @@ void interesting(){
 
 void (*ptrToInteresting)() = interesting; // ptr to function 
 ptrToInteresting();
+```
+
+### Null Pointer
+```
+void printVal(int * a){
+   printf("Pointer value is :%p\n", a);
+}
+
+printVal(nullptr);
+```
+
+### Factorial
+```
+#include <iostream>
+using namespace std;
+int factorial(int a); // function definition
+
+// 3! =>  3*2*1
+// 4! =>  4*3*2*1
+
+int main(){
+    cout << "factorial of 4 is :" <<factorial(4);
+    return 0;
+}
+
+int factorial(int a){
+  if(a == 1){
+     return 1;
+  }
+   return a * factorial(a-1);
+}
 ```
