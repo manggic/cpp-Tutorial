@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 05:44:30
+timing = 05:59:30
 
 
 
@@ -365,5 +365,21 @@ int factorial(int a){
      return 1;
   }
    return a * factorial(a-1);
+}
+```
+
+### Macros
+```
+macros helps us to reduce our same var changes in lots of places
+just a single change in MACRO will change the entire
+
+#define end return 0 
+#define console_log(a) cout << a << endl
+
+int main(){
+   int x = 10;
+   cout << x;
+   console_log(15);
+   end;
 }
 ```
