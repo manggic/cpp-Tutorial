@@ -30,10 +30,19 @@ class Phone{
     Phone(); // default constructor
     Phone(const string & name, const string & os, const int & price);
     Phone(const Phone &);  // copy constructor
-    string getName(){return _name;}
+    string getName(){
+       printf("Value of getName is %p\n", this);
+       return _name;
+       }
+    int getPrice();
     ~Phone();  // destructor
 };
 
+
+int Phone::getPrice(){
+   printf("Value of getPrice is %p\n", this);
+   return _price;
+}
 
 Phone::Phone():_name("iphone 14"), _os("andriod"), _price(){
    puts("default constructor");
@@ -64,6 +73,9 @@ int main(){
    Phone onePlus8S = onePlus8;
    cout << "Name of the Phone is " << onePlus8S.getName() << endl; 
 
+
+   printf("value of object is %p\n", &onePlus8);
+   cout << onePlus8.getPrice() ;
 
    return 0;
 }
