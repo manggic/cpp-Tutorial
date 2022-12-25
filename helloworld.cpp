@@ -1,25 +1,34 @@
-
 #include <iostream>
 #include <string>
 using namespace std;
 
-template <typename T>
+class User{
+   int _secret = 333;  // by default this is private
+   string message = "messsage";  // by default this is private
+   public:
+       string name = "default";
+       void classMessage(){cout << "classs is great, " << name << endl;}
 
+       void consoleMessage();
+       int getSecret()const{return _secret;}
+       void setSecret(const int & newsecret){_secret = newsecret;}
+};
 
-void func(T t){
-   cout << "single params :" << t << endl;
+void User::consoleMessage(){
+   cout << "Message of User class is :" << message << endl;
 }
 
-template <typename T, typename... Args> 
-
-void func(T t, Args... args){
-   cout << t << endl;
-   func(args...);
-}
 
 int main(){
+   User manish;
+   manish.setSecret(66);
+   // cout << manish.getSecret();
+   manish.consoleMessage();
 
-   string name = "hitesh";
-   func(1,2,2.5, 3.5, name);
+
+   const User rock;
+   cout << rock.getSecret();
    return 0;
 }
+
+
