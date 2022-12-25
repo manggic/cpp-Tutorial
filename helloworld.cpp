@@ -1,10 +1,25 @@
 
 #include <iostream>
+#include <string>
 using namespace std;
-#define console_log(a) cout << a << endl
 
+template <typename T>
+
+
+void func(T t){
+   cout << "single params :" << t << endl;
+}
+
+template <typename T, typename... Args> 
+
+void func(T t, Args... args){
+   cout << t << endl;
+   func(args...);
+}
 
 int main(){
-   console_log(15);
+
+   string name = "hitesh";
+   func(1,2,2.5, 3.5, name);
    return 0;
 }
