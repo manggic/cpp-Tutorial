@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 05:17:37
+timing = 05:27:30
 
 
 
@@ -312,4 +312,27 @@ void lifeUp(int &life){
      ++life;
 }
 #endif
+```
+
+### Template 
+```
+template <typename T>
+
+T addMe(T a, T b){
+   return a + b;
+}
+
+cout << "integer sun is :" << addMe(10,20)<< endl;
+cout << addMe(10.21,20.81) << endl;
+```
+
+
+### Pointer to function
+```
+void interesting(){
+    puts("interesting");
+}
+
+void (*ptrToInteresting)() = interesting; // ptr to function 
+ptrToInteresting();
 ```

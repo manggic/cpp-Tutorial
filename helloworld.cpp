@@ -4,9 +4,19 @@
 #include "adder.h"
 using namespace std;
 
+template <typename T>
+
+T addMe(T a, T b){
+   return a + b;
+}
+
+
+void interesting(){
+    puts("interesting");
+}
+
 int main(){
-    int life = 3;
-    lifeUp(life); 
-    cout << life << endl;
+   void (*ptrToInteresting)() = interesting; // ptr to function 
+   ptrToInteresting();
     return 0;
 }
