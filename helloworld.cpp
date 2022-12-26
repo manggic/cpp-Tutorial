@@ -1,38 +1,27 @@
 #include <iostream>
 #include <string>
+#include <memory>
 using namespace std;
 
 
+class User{
+ public:
+    User(){ cout << "User created";}
+    ~User(){ cout << "User created";}
 
-class One{
-   public:
-    virtual void intro(){
-       cout << "I am One\n";
-    }
+    void testFunc(){ cout << "I m a test func\n";} 
 };
 
-class Two: public One {
-    public:
-    void intro(){
-       cout << "I am Two\n";
-    }
-};
-class Three: public One {
-    public:
-    void intro(){
-       cout << "I am Three\n";
-    }
-};
+int main(){  
+   {
+       unique_ptr<User> sam =  make_unique<User>();
+       sam->testFunc();
+    //    unique_ptr<User> sam = samm; // not allowed
+   }
 
-
-int main(){
-    
-    One *a;
-    Two b;
-    Three c;
-
-    a = & b;
-    a->intro();
-
+   {
+       shared_ptr<User> tim = make_shared<User>();
+       shared_ptr<User> timm = tim;
+   }
     return 0;
 }
