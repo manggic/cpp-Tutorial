@@ -485,3 +485,29 @@ int main(){
    return 0;
 }
 ```
+
+### friend
+```
+class Man{
+   int _age;
+
+   // same as keeping this in protected class
+   friend class SuperMan;
+   public:
+   Man(int age):_age(age){};
+
+};
+
+class SuperMan: public Man{
+public:
+   SuperMan(int age):Man(age){};
+   // i can access _age cauze i m friend with base class
+   void logPriAge(){printf("Logging private Age %d\n", _age );}
+};
+
+int main(){
+    SuperMan s1(2);
+    s1.logPriAge();
+    return 0;
+}
+```
