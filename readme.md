@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 07:45:30
+timing = 08:05:30
 
 
 
@@ -508,6 +508,59 @@ public:
 int main(){
     SuperMan s1(2);
     s1.logPriAge();
+    return 0;
+}
+```
+
+### multiple inheritance
+```
+class Money{
+   public:
+      void gotMoney(){cout << "Got 5K\n";}
+};
+
+class SuperMan: public Man, public Money{
+public:
+   SuperMan(int age):Man(age){};
+   void logPriAge(){printf("Logging private Age %d\n", _age );}
+};
+
+int main(){
+    SuperMan s1(5);
+    s1.gotMoney();
+    return 0;
+}
+```
+
+### virtual function
+```
+class One{
+   public:
+    virtual void intro(){
+       cout << "I am One\n";
+    }
+};
+
+class Two: public One {
+    public:
+    void intro(){
+       cout << "I am Two\n";
+    }
+};
+class Three: public One {
+    public:
+    void intro(){
+       cout << "I am Three\n";
+    }
+};
+
+
+int main(){
+    One *a;
+    Two b;
+    Three c;
+    a = & b;
+    a->intro();
     return 0;
 }
 ```
