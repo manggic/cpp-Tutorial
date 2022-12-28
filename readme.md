@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 09:14:30
+timing = 09:24:30
 
 
 
