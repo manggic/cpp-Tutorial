@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 08:33:30
+timing = 08:49:30
 
 
 
@@ -631,4 +631,45 @@ int main(){
 }
 ```
 
+### vector
+```
+#include <iostream>
+#include <vector>
+using namespace std;
 
+struct Corners{
+    int a, b, c, d;
+};
+
+// overloading operator <<
+ostream& operator<<(ostream& stream , const Corners & corner){
+    stream << corner.a << corner.b  << corner.c << corner.d;
+    return stream;
+}
+
+
+int main()
+{
+    vector<int> v1;
+    v1.push_back(1);
+    v1.push_back(2);
+    v1.push_back(3);
+   
+   for(auto i = v1.begin();i!=v1.end();i++){
+        cout << *i << " ";
+    }
+    
+    vector<Corners> corners;
+    
+    
+    corners.push_back({ 1,2,3,4});
+    corners.push_back({ 5,6,7,8});
+    
+   for(int i = 0; i < corners.size();i++){
+        cout << corners[i] << " ";
+   } 
+    
+   return 0;
+}
+
+```
