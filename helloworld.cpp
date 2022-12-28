@@ -4,24 +4,23 @@
 using namespace std;
 
 
-class User{
- public:
-    User(){ cout << "User created";}
-    ~User(){ cout << "User created";}
-
-    void testFunc(){ cout << "I m a test func\n";} 
-};
+string printMe(){
+    return "I am print";
+}
 
 int main(){  
-   {
-       unique_ptr<User> sam =  make_unique<User>();
-       sam->testFunc();
-    //    unique_ptr<User> sam = samm; // not allowed
-   }
 
-   {
-       shared_ptr<User> tim = make_shared<User>();
-       shared_ptr<User> timm = tim;
-   }
+
+    // printMe and s will have 2 diff ref in memory
+    string s = printMe();
+
+    cout << s << endl;
+
+    // printMe will directly ref s to the function hence moving will take place
+    string && ss = printMe();
+
+    cout << ss << endl;
+
+    
     return 0;
 }

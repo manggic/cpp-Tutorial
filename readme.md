@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 08:17:30
+timing = 08:33:30
 
 
 
@@ -564,3 +564,71 @@ int main(){
     return 0;
 }
 ```
+
+
+### Swap of 2 numbers
+```
+void swap(int &a, int &b){
+   int tmp = a;
+   a = b;
+   b = tmp;
+}
+
+int main(){  
+
+    int a = 10, b = 5;
+    swap(a, b); 
+
+    cout << "A :" << a << endl;
+    cout << "B :" << b << endl;
+    return 0;
+}
+```
+
+### Swap without using 3rd variable
+```
+int main(){  
+    int a = 15, b = 2;
+    a = b - a;
+    b = b - a;
+    a = a + b;
+    cout << "a :" << a << endl; 
+    cout << "b :" << b << endl; 
+    return 0;
+}
+```
+
+### Move semantics
+```
+// Here we are not copying, we are just moving the data
+// tmp won't take extra memory in this case 
+
+void swap(int &a, int &b){
+   int tmp = move(a);
+   a = move(b);
+   b = move(tmp);
+}
+```
+
+### Move semantics more example
+```
+string printMe(){
+    return "I am print";
+}
+
+int main(){  
+    // printMe and s will have 2 diff ref in memory
+    string s = printMe();
+
+    cout << s << endl;
+
+    // printMe will directly ref s to the function hence moving will take place
+    string && ss = printMe();
+
+    cout << ss << endl;
+    
+    return 0;
+}
+```
+
+
