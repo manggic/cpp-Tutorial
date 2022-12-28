@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 08:49:30
+timing = 08:57:30
 
 
 
@@ -672,4 +672,20 @@ int main()
    return 0;
 }
 
+```
+
+### lambda function 
+```
+int main()
+{
+     []{}();
+     []{cout << "lambda func\n";}();
+     [](){return 200;}; 
+     
+     auto sum = [](auto a, auto b){return a + b;};
+     cout << "Sum of a and b is :" << sum(10, 5) << endl;
+     cout << "Sum of a and b is :" << sum(10.5, 5.5); 
+     
+   return 0;
+}
 ```
