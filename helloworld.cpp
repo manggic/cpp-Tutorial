@@ -3,36 +3,36 @@
 #include <vector>
 using namespace std;
 
-struct Corners{
-  int a;
-};
 
-
-ostream& operator<<( ostream& stream , const Corners& corners){
-    stream << corners.a ;
-    return stream; 
-}
 
 int main(){  
-  vector<int> vety;
-  vety.push_back(2);
-  vety.push_back(3);
-  vety.push_back(4);
-
-  // for(auto i = vety.begin() ;i != vety.end(); i++){
-  //     cout <<  *i << endl;
-  // }
-
-  vector<Corners> corners;
-
-  // corners[0].a =2;
-
-  // cout << corners[0].a ;
-
-  for(int i = 0 ; i < corners.size() ; i++  ){
-    cout << corners[i] ;
-  }
+  
+  char * originalFile = "originalFile.txt";
+  char * editedFile = "editedFile.txt";
+  char * info = "i am information";
 
 
-   return 0;
+  //rename old file 'originalFile' into 'editedFile'
+  rename(originalFile, editedFile);
+ 
+  // delete this file
+  remove(editedFile);
+
+  // open file in write mode
+  FILE * fh = fopen(originalFile, "w");
+
+  fputs(info, fh); // add info content to the originalFile.txt
+  fclose(fh);
+
+  // open this file in append mode 
+  FILE * fh = fopen(originalFile, "a");
+
+
+  // read a file and console output on screen
+  FILE * fh = fopen(originalFile, "r");
+  char string[100];
+  while(fgets(string, 100, fh)) {
+    printf("%s\n", string);
+}
+  return 0;
 }
