@@ -1,6 +1,6 @@
 
 link : https://youtu.be/FpfHmAkRVK4 <br>
-timing = 09:24:30
+timing = 09:39:30
 
 
 
@@ -724,4 +724,58 @@ int main(){
 }
   return 0;
 }  
+```
+
+
+### functor
+```
+class MyFloat{
+   float ft;
+
+   public:
+      MyFloat(){
+        ft = 0.1;
+      }
+      void getValue(){
+        cout << ft << endl;
+      }
+
+      // overloading operator ()
+      void operator()(float v){
+           ft += v;
+      }
+};
+
+int main(){  
+  
+  MyFloat floaty;
+  floaty.getValue();
+  floaty(2);
+  floaty.getValue();
+
+  return 0;
+}
+```
+
+
+### sort
+```
+int main(){  
+  
+  int numbers[6] = {3, 4, 2, 1, 5, 9};
+
+  cout << "Unsorted array :" << endl;
+  for(int n: numbers){
+    cout << n << " ";
+  }
+
+  sort(numbers, numbers + 6);
+  
+  cout << "\nsorted array :" << endl;
+   for(int n: numbers){
+    cout << n << " ";
+  }
+  
+  return 0;
+}
 ```
